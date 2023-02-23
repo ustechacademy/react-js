@@ -92,6 +92,7 @@ oluşturun ve div#root'umuza bir h1 ekleyin (innerHTML kullanmadan yapiniz).
 const h1React = <h1 className="header" color="#fff">Hello React!</h1>;
 console.log(h1React)
 console.log(<MainContent type="contentBody" color="" background="#ffffff"/>)
+
 const h1 =  document.createElement("h1")
 h1.innerText = "Hello react, normal js!"
 h1.className = "header"

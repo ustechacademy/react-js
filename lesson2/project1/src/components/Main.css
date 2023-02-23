@@ -1,0 +1,18 @@
+main{
+    padding: 40px 30px;
+    color: #FFFFFF;
+}
+
+.main--title{
+    font-size: 39px;
+}
+
+.main--list{
+    max-width: fit-content;
+}
+
+.main--list > li::marker{
+    color: #61DAFB;
+    font-size: 30px;
+}
+
