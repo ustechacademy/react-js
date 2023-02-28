@@ -16,6 +16,7 @@ function App() {
     )
   });
 
+  /*
   function cardsFunction(){
     for (let index = 0; index < data.length; index++) {
       const element = data[index];
@@ -37,6 +38,7 @@ function App() {
     }
 
   } 
+  */
   /**
    * 
    *    <Card data={data[0]} />
@@ -53,8 +55,8 @@ function App() {
         <Hero2 name="Ustech"/>
         <section className="cards-list">
           {cards}
-          {cardsFunction()}
-          {cardsConstFunction()}
+          {/*cardsFunction()*/}
+          {/*cardsConstFunction()*/}
         </section>
       </div>
     </>
