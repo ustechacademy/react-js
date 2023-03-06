@@ -18,6 +18,7 @@ function Form(){
     }
 
     function handleEmail(event){
+        console.log(event.target.value);
         setEmail(event.target.value);
     }
 
