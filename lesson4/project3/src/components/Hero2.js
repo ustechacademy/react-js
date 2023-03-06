@@ -1,7 +1,7 @@
 import React from "react";
 import heroImg from "../images/hero-img.png"
 
-export default class Hero2 extends React.Component {
+ class Hero2 extends React.Component {
     render() {
         const props = this.props;
         console.log("class props", props);
@@ -15,9 +15,10 @@ export default class Hero2 extends React.Component {
         )
     }
 }
+export default Hero2;
 
 /*
-export default function Hero2(props) {
+ function Hero2(props) {
     return (
         <section className="hero">
             <img src={heroImg} alt="hero-img" className="hero-img" />
@@ -27,5 +28,5 @@ export default function Hero2(props) {
         </section>
     )
 }
-
+export default Hero2;
 */

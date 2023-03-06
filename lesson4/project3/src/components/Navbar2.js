@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import logo from "../images/airbnb.png"
-//class Navbar2 extends React.Component {
+//class Navbar2 extends React.Component { 
 class Navbar2 extends Component {
     render() {
         return (
