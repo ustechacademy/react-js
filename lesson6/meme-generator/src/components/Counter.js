@@ -5,10 +5,10 @@ function Counter(){
 
     const [count,setCount] = React.useState(0);
 
+    ///////////////////
+
     function add(){
         setCount(count + 1)
-
-        return count;
     }
 
     function subtract(){
@@ -20,7 +20,7 @@ function Counter(){
         setCount(0) 
     }
 
-
+    /////////////////////
     return(
         <div className="counter">
             <button className="counter--minus" onClick={subtract}> - </button>

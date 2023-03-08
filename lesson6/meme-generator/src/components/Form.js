@@ -10,6 +10,8 @@ function Form(){
     const [isComputer,setIsComputer] = React.useState(false);
     // radio
     const [status,setStatus] = React.useState("");
+    //select
+    const [favBrand, setFavBrand] = React.useState("");
 
 
     function handleFirstName(event){
@@ -31,14 +33,21 @@ function Form(){
     function handleRadioButton(event){
         console.log(event.target.value);
         setStatus(event.target.value);
+    }
 
-        console.log(status);
+    function handleSelect(event){
+        setFavBrand(event.target.value)
+    }
+
+    function handleSubmit(event){
+        event.preventDefault();
+        console.log(event);
     }
 
 
-
+    console.log(favBrand);
     return(
-        <form>
+        <form onSubmit={handleSubmit}>
             <input 
                 type="text"
                 placeholder="First Name"
@@ -63,11 +72,49 @@ function Form(){
                 type="radio"
                 value="fulltime"
                 name="fulltime"
-                checked={status}
+                checked={status === "fulltime"}
                 onChange={handleRadioButton}
             />
+            <label>Full Time</label>
+
+            <input 
+                type="radio"
+                value="parttime"
+                name="parttime"
+                checked={status === "parttime"}
+                onChange={handleRadioButton}
+            />
+            <label>Part Time</label>
+
+            {/** Radio button, Freelance -> freelance input radio */}
+            <input
+                type="radio"
+                value="freelance"
+                name="freelance"
+                checked={status === "freelance"}
+                onChange={handleRadioButton}
+            />
+            <label>Freelance</label>
+
+            <br/>
+            <br/>
+
+            <label>What is your favorite brand?</label>
+            <select
+                value={favBrand}
+                onChange={handleSelect}
+                name="favBrand"
+            >
+                <option value="bmw">BMW</option>
+                <option value="mercedes">Mercedes</option>
+                <option value="audi">Audi</option>
+                <option value="honda">Honda</option>
+                <option value="tofas">Tofas</option>
+                <option value="volvo">Volvo</option>
+            </select>
 
 
+            <button>Submit</button>
         </form>
     )
 }
