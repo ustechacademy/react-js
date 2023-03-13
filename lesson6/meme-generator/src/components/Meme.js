@@ -15,10 +15,11 @@ function Meme(){
             const res = await fetch("https://api.imgflip.com/get_memes");
             const data = await res.json();
             setAllImages(data.data.memes);
+            console.log(data);
         }
 
         getImages();
-    });
+    },[]);
 
     function getMemeImage(){
         const randomNumber = Math.floor(Math.random() * allImages.length);
