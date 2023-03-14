@@ -20,13 +20,17 @@ function App() {
            <Signup />
            <Ternary />
            <UseEffect />
-        <Navbar />
+ 
+      
+      <MUI />
+       <Input type="password" label="Password label only"/>
+        */}
+
+      <Navbar />
       <main className='main'>
         <Meme />
       </main>
-      <MUI />
-        */}
-        <Input type="password" label="Password label only"/>
+
     </div>
   );
 }
