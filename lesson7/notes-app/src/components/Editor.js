@@ -10,16 +10,16 @@ const converter = new Showdown.Converter({
   tasklists: true
 });
 
-export default function Editor() {
-  const [value, setValue] = React.useState("**Hello world!!!**");
+export default function Editor(props) {
+  //const [value, setValue] = React.useState("**Hello world!!!**");
   const [selectedTab, setSelectedTab] = React.useState("write")
   //const [selectedTab, setSelectedTab] = React.useState<"write" | "preview">("write");
   
   return (
     <div className="container">
       <ReactMde
-        value={value}
-        onChange={setValue}
+        value={props.currentNote.body}
+        //onChange={setValue}
         selectedTab={selectedTab}
         onTabChange={setSelectedTab}
         generateMarkdownPreview={markdown =>
