@@ -125,7 +125,7 @@ function App() {
   }
 
   console.log("getCurrentNote",getCurrentNote());
-
+/*
   // Arrow Function Examples
   function counterFunc(counter) {
     if (counter > 100) {
@@ -161,6 +161,8 @@ function App() {
     console.log("Hello " + name);
     console.log("You are " + age + " years old");
   }
+
+  */
 
 
   return (
