@@ -127,7 +127,41 @@ function App() {
   console.log("getCurrentNote",getCurrentNote());
 
   // Arrow Function Examples
-  
+  function counterFunc(counter) {
+    if (counter > 100) {
+      counter = 0;
+    }else {
+      counter++;
+    }
+    
+    return counter;
+  }
+
+  // Arrow function olarak yazin ve degiskene atayin.
+  // (paramaters) => {logic}
+
+  const counterFunc = (counter) => {
+    if (counter > 100) {
+      counter = 0;
+    }else {
+      counter++;
+    }
+    
+    return counter;
+  }
+
+  const counterFunc = (counter) => {counter > 100 ? 0 : counter++}
+
+  function nameAge(name, age) {
+    console.log("Hello " + name);
+    console.log("You are " + age + " years old");
+  }
+
+  const nameAge = (name,age) => {
+    console.log("Hello " + name);
+    console.log("You are " + age + " years old");
+  }
+
 
   return (
     <main>
