@@ -75,6 +75,36 @@ function App() {
     */
   }
 
+  function updateNote(noteBody){
+    // noteBody -> React js todo app
+    console.log("Note body",noteBody);
+    //console.log("Update note fonksiyonu");
+
+    const noteIndex = notes.findIndex((note) => note.id === currentNoteId);
+
+    if(noteIndex === -1){
+      console.log("Note bulunamadi.");
+      return;
+    }
+
+    const updatedNote = {
+      id: currentNoteId,
+      body: noteBody
+    };
+    
+    const updatedNotes = [...notes]; // copy of the current notes in the state
+    updatedNotes[noteIndex] = updatedNote; 
+
+    setNotes(updatedNotes);
+    /* 
+     setNotes((prevNotes) => {
+        const updatedNotes = [...prevNotes]; // copy of the current notes in the state
+        updatedNotes[noteIndex] = updatedNote; 
+        return updatedNotes;
+     });
+    */
+  }
+
   function getCurrentNote(){
     
     return(
@@ -85,8 +115,8 @@ function App() {
     
     
     /*const ages = [3, 10, 19, 20];
-    // filter -> kosula uygun tüm durumlari getirir
-    // find -> kosula uygun ilk buldugu durumu getirir
+    // filter -> kosula uygun tüm durumlari getirir. Array return eder.
+    // find -> kosula uygun ilk buldugu durumu getirir. Array return eder.
 
     const res = ages.find(age => age > 18);
 
@@ -95,6 +125,9 @@ function App() {
   }
 
   console.log("getCurrentNote",getCurrentNote());
+
+  // Arrow Function Examples
+  
 
   return (
     <main>
@@ -111,8 +144,9 @@ function App() {
               newNote={createNewNote} 
               deleteNote={deleteNote}
               currentNote={getCurrentNote}
+              setCurrentNoteId={setCurrentNoteId}
             />
-            <Editor currentNote={getCurrentNote()} />
+            <Editor currentNote={getCurrentNote} updateNote={updateNote} />
           </Split>
 
         </div>

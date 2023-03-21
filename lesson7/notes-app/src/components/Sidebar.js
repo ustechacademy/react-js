@@ -7,7 +7,7 @@ export default function Sidebar(props){
     // delete fonksiyonu neden burada tanimlanmadi
 
     const noteElements = props.notes.map((note,index) => (
-        <div className="title">
+        <div className="title" onClick={() => props.setCurrentNoteId(note.id)}>
             <h4 className="text-snippet">{note.body}</h4>
             <button className="delete-btn" onClick={(event) => props.deleteNote(event,note.id)}>Delete</button>
         </div>
